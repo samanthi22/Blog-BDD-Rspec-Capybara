@@ -9,8 +9,8 @@
   </head>
 
   <body>
-    <%= flash.each do |key, message| %>
-      <div class="text-center alert alert-<%= key == 'notice'? 'success' : 'danger' %>">
+    <% flash.each do |key, message| %>
+      <div class="text-center alert alert-<% key == 'notice'? 'success' : 'danger' %>">
         <%= message %>
       </div>
     <% end %>
